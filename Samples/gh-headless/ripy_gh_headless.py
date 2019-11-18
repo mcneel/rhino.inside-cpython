@@ -17,7 +17,7 @@ def gh_headless():
 
     import Grasshopper
 
-    #file path to .gh file to run
+    #file path to .gh file to evaluate
     filePath =(os.path.join(os.getcwd(),"simple_def.gh"))
 
     if not os.path.isfile(filePath):
