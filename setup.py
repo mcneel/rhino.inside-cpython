@@ -14,7 +14,7 @@ with open(path.join(this_directory, 'README.md')) as f:
 
 setuptools.setup(
     name="rhinoinside",
-    version="0.5.0",
+    version="0.6.0",
     packages=['rhinoinside'],
     include_package_data=True,
     author="Robert McNeel & Associates",
@@ -25,7 +25,7 @@ setuptools.setup(
     url="https://github.com/mcneel/rhino.inside/tree/master/CPython",
     install_requires=['pythonnet'],
     classifiers=[
-        "Development Status :: 3 - Alpha",
+        "Development Status :: 4 - Beta",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: MIT License",
         "Operating System :: Microsoft :: Windows",

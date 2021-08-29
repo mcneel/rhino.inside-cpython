@@ -9,6 +9,7 @@ __rhino_core = None
 __load_called = False
 
 
+
 def load(rhino_dir=None):
     """
     Load Rhino into the python process
