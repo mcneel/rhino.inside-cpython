@@ -1,7 +1,9 @@
 # rhinoinside python package
 Embed Rhino in CPython
 
-`pip install --user rhinoinside`
+```sh
+pip install --user rhinoinside
+```
 
 ## Requirements:
 - Rhino 7
@@ -13,7 +15,7 @@ Embed Rhino in CPython
 https://discourse.mcneel.com/t/rhino-inside-python/78987
 
 ## How to use
-```
+```py
 import rhinoinside
 rhinoinside.load()
 import System
