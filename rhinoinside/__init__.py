@@ -7,7 +7,7 @@ import struct
 # launch Rhino.Inside of python
 __rhino_core = None
 __load_called = False
-
+Rhino = None
 
 
 def load(rhino_dir=None):
@@ -38,5 +38,6 @@ def load(rhino_dir=None):
         if rhino_dir:
             RhinoInside.Resolver.RhinoSystemDirectory = rhino_dir
         clr.AddReference("RhinoCommon")
+        global Rhino
         import Rhino
         __rhino_core = Rhino.Runtime.InProcess.RhinoCore()
