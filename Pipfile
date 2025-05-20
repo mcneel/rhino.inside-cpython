@@ -1,0 +1,20 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pythonnet = "*"
+dnfile = "*"
+pytest = "*"
+setuptools = "*"
+
+[dev-packages]
+requests = "*"
+packaging = "*"
+black = "*"
+build = "*"
+twine = "*"
+
+[requires]
+python_version = "3.12"
