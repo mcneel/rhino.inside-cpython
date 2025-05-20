@@ -30,6 +30,7 @@ include-package-data = true
 
 [tool.setuptools.packages.find]
 where = ["."]
+exclude = ["tests*", "docs*", "scripts*", "examples*"]
 
 [tool.pytest.ini_options]
 addopts = "-ra -q"
