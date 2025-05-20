@@ -140,6 +140,7 @@ def __on_exit() -> None:
         and callable(__rhino_core.Dispose)
     ):
         __rhino_core.Dispose()
+        __rhino_core = None
 
 
 def __handle_terminate_signal(_1, _2) -> None:
