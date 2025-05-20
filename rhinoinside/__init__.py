@@ -13,7 +13,6 @@ RESOLVER_LIBNAME = "Rhino.Inside"
 # create and hold onto an instance of RhinoCore to properly
 # launch Rhino.Inside of python
 __rhino_core = None
-__rhinoinside_path = os.path.dirname(os.path.abspath(__file__))
 
 
 RhinoSystem = TypeVar("RhinoSystem", bound="_RhinoSystem")
@@ -103,8 +102,7 @@ class _RhinoSystem:
         return f"{RESOLVER_LIBNAME}_v{self.major_version}_{dotnet_framework.identifier}.dll"
 
     def __get_libfile(self, dotnet_framework: _DotNetFramework) -> str:
-        global __rhinoinside_path
-        return os.path.join(__rhinoinside_path, self.__get_libname(dotnet_framework))
+        return os.path.join(os.path.dirname(os.path.abspath(__file__)), self.__get_libname(dotnet_framework))
 
     def load(self, dotnet_framework: _DotNetFramework) -> None:
         # load netfx or netcore runtime first
