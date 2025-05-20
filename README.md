@@ -36,21 +36,23 @@ print (crv.GetLength())
 You can pass arguments to the `.load()` function to start a different version of rhino on a specific dotnet framework
 
 ```python
-rhinoinside.load(7)
+rhinoinside.load(7)  # defaults to net48
 rhinoinside.load(7, 'net48')
-rhinoinside.load(r"C:\Program Files\Rhino 7")
+rhinoinside.load(r"C:\Program Files\Rhino 7") # defaults to net48
 rhinoinside.load(r"C:\Program Files\Rhino 7", 'net48')
 
+rhinoinside.load(8) # defaults to net48
 rhinoinside.load(8, 'net48')
 rhinoinside.load(8, 'net7.0')
 rhinoinside.load(8, 'net8.0')
-rhinoinside.load(r"C:\Program Files\Rhino 8")
+rhinoinside.load(r"C:\Program Files\Rhino 8") # defaults to net48
 rhinoinside.load(r"C:\Program Files\Rhino 8", 'net48')
 rhinoinside.load(r"C:\Program Files\Rhino 8", 'net8.0')
 
+rhinoinside.load(9) # defaults to net48
 rhinoinside.load(9, 'net48')
 rhinoinside.load(9, 'net9.0')
-rhinoinside.load(r"C:\Program Files\Rhino 9 WIP")
+rhinoinside.load(r"C:\Program Files\Rhino 9 WIP") # defaults to net48
 rhinoinside.load(r"C:\Program Files\Rhino 9 WIP", 'net48')
 rhinoinside.load(r"C:\Program Files\Rhino 9 WIP", 'net9.0')
 ```
