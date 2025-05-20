@@ -19,10 +19,16 @@ jobs:
       - name: Upgrade pip and install build tools
         run: |
           python -m pip install --upgrade pip
-          pip install build
+          pip install build twine
 
       - name: Build the package
         run: python -m build
+
+      - name: Publish the package
+        env:
+          TWINE_USERNAME: ${{ secrets.PYPI_API_USERNAME }}
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: python -m twine upload dist/*
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
