@@ -16,6 +16,12 @@ def pytest_addoption(parser):
     )
 
 
+def pytest_terminal_summary(terminalreporter, exitstatus, config):
+    rhino = config.getoption("--rhino")
+    framework = config.getoption("--framework")
+    terminalreporter.write_sep("=", f"rhino {rhino} - (dotnet {framework})")
+
+
 @pytest.fixture(scope="session")
 def rhino_version(request):
     return request.config.getoption("--rhino")
