@@ -25,6 +25,12 @@ classifiers = [
   "Programming Language :: Python"
 ]
 
+[project.urls]
+Homepage = "https://github.com/mcneel/rhino.inside-cpython"
+Documentation = "https://github.com/mcneel/rhino.inside-cpython"
+Source = "https://github.com/mcneel/rhino.inside-cpython"
+Tracker = "https://github.com/mcneel/rhino.inside-cpython"
+
 [tool.setuptools]
 include-package-data = true
 
