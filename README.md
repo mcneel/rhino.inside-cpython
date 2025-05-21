@@ -6,9 +6,9 @@ pip install --user rhinoinside
 ```
 
 ## Requirements:
-- Rhino 7
+- Rhino 7, 8, 9 (WIP)
 - Windows
-- 64 bit version of CPython (2.7, 3.5, 3.6, 3.7, 3.8)
+- 64 bit version of CPython (>= 3.7)
 
 ## Join the discussion
 
