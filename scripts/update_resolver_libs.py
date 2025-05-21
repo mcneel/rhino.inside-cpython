@@ -127,11 +127,13 @@ destination_folder = Path(op.dirname(op.dirname(__file__)), 'rhinoinside')
 destination_folder.mkdir(parents=True, exist_ok=True)
 
 v7 = get_latest_nuget_version("Rhino.Inside", "7.*")  # e.g., '7.0.0'
+print(f'Embedding {v7}')
 nupkg = download_nupkg("Rhino.Inside", v7, destination_folder)
 extract_file_from_nupkg(nupkg, "lib/net48/RhinoInside.dll", destination_folder / "Rhino.Inside_v7_net48.dll")
 safe_delete_file(nupkg)
 
 v8 = get_latest_nuget_version("Rhino.Inside", "8.*")  # e.g., '8.0.7-beta'
+print(f'Embedding {v8}')
 nupkg = download_nupkg("Rhino.Inside", v8, destination_folder)
 extract_file_from_nupkg(nupkg, "lib/net48/Rhino.Inside.dll", destination_folder / "Rhino.Inside_v8_net48.dll")
 extract_file_from_nupkg(nupkg, "lib/net7.0/Rhino.Inside.dll", destination_folder / "Rhino.Inside_v8_net7.0.dll")
@@ -139,6 +141,7 @@ extract_file_from_nupkg(nupkg, "lib/net8.0/Rhino.Inside.dll", destination_folder
 safe_delete_file(nupkg)
 
 v9 = get_latest_nuget_version("Rhino.Inside", "9.*")  # e.g., '9.0.3-beta'
+print(f'Embedding {v9}')
 nupkg = download_nupkg("Rhino.Inside", v9, destination_folder)
 extract_file_from_nupkg(nupkg, "lib/net48/Rhino.Inside.dll", destination_folder / "Rhino.Inside_v9_net48.dll")
 extract_file_from_nupkg(nupkg, "lib/net9.0/Rhino.Inside.dll", destination_folder / "Rhino.Inside_v9_net9.0.dll")
